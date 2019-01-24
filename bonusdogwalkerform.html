@@ -2,9 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Request Dog Walker</title>
 </head>
 <body>
-
+    <h3>Tell us about yourself!</h3>
+    <form method="POST" action="https://request-inspector.glitch.me/">
+        <div>
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" placeholder="First & last name">
+            <br>
+            <label for="phone#">Phone Number</label>
+            <input id="phone#" type="text" name="phone#" placeholder="Phone #">
+            <br>
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="Enter email here">
+            <br>
+            <label for="pet_name">Pet's Name</label>
+            <input id="pet_name" type="text" placeholder="Dog's name">
+            <br>
+            <label for="address">Address</label>
+            <input id="address" type="text" placeholder="Enter address">
+        </div>
+        <div>
+            <fieldset>
+                <legend>Walk duration wanted</legend>
+                <label for="15-30">
+                    <input id="15-30" type="radio" name="q1" value="15-30">15-30 minutes
+                </label>
+                <label for="30-45">
+                    <input id="30-45" type="radio" name="q1" value="30-45">30-45 minutes
+                </label>
+                <label for="45-60">
+                    <input id="45-60" type="radio" name="q1" value="45-60">45-60 minutes
+                </label>
+            </fieldset>
+        </div>
+        <div>
+            <h3>We offer additional services</h3>
+            <fieldset>
+                <legend>Please select any additional services wanted</legend>
+                <label for="feed_water">
+                    <input id="feed_water" type="checkbox" name="q2" value="feed_water">Give Food and Water
+                </label>
+                <label for="brush">
+                    <input id="brush" type="checkbox" name="q2" value="brush">Brush coat
+                </label>
+                <label for="nails">
+                    <input id="nails" type="checkbox" name="q2" value="nails">Trim nails
+                </label>
+                <label for="teeth">
+                    <input id="teeth" type="checkbox" name="q2" value="teeth">Brush teeth
+                </label>
+            </fieldset>
+        </div>
+        <div>
+            <h3>Please select your dogs breed</h3>
+            <select name="breed">
+                <option value="chihuahua">Chihuahua</option>
+                <option value="lab">Labrador</option>
+                <option value="gs">German Shepherd</option>
+                <option value="yorkie">Yorkie</option>
+                <option value="as">Australian Shepherd</option>
+                <option value="pb">Pitbull</option>
+                <option value="schnauzer">Mini Schnauzer</option>
+                <option value="poodle">Poodle</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <button>Submit</button>
+    </form>
 </body>
 </html>
