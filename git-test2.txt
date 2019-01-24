@@ -1,0 +1,2 @@
+Getting git is legit
+adding line for test
