@@ -1,3 +1,96 @@
-.fancy-header{
+h1.fancy-header{
     color:purple;
+    text-align: center;
 }
+
+h2{
+    text-align: center;
+    color:purple;
+
+}
+
+body{
+
+    background-color: darkgray;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+    letter-spacing: .2rem;
+
+
+}
+
+ul {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+}
+
+ol{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    list-style: upper-roman;
+}
+
+a:link{
+    color:red;
+}
+
+a:visited{
+    color:black;
+}
+
+header{
+    text-align: center;
+}
+
+a:hover{
+    color:blue;
+}
+
+a:active{
+    color:forestgreen;
+}
+
+table{
+    text-align: center;
+}
+
+.images{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+table{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+footer{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+li:hover{
+    color:pink;
+}
+
+h1:hover{
+    color: pink;
+}
+
+h2:hover{
+    color:pink;
+}
+
+img:hover {
+    filter: blur(4px);
+}
+/* guygyugyguyguy /*
