@@ -1,17 +1,17 @@
 h1.fancy-header{
-    color:purple;
+    color:darkolivegreen;
     text-align: center;
 }
 
 h2{
     text-align: center;
-    color:purple;
+    color:darkolivegreen;
 
 }
 
 body{
 
-    background-color: darkgray;
+    background-color: aquamarine;
     font-family: 'Montserrat', sans-serif;
     margin: 0 auto;
     letter-spacing: .2rem;
@@ -23,7 +23,7 @@ ul {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 30%;
 
 }
 
@@ -31,8 +31,12 @@ ol{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 40%;
     list-style: upper-roman;
+}
+
+li{
+    text-align: center;
 }
 
 a:link{
@@ -55,10 +59,6 @@ a:active{
     color:forestgreen;
 }
 
-table{
-    text-align: center;
-}
-
 .images{
     display: block;
     margin-left: auto;
@@ -70,12 +70,14 @@ table{
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    border: 2px solid black;
 }
 
 footer{
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    text-align: center;
 }
 
 li:hover{
@@ -93,4 +95,15 @@ h2:hover{
 img:hover {
     filter: blur(4px);
 }
-/* guygyugyguyguy /*
+
+p{
+    text-align: center;
+}
+
+table:hover{
+    color:pink;
+}
+
+td{
+    border: 1px solid black;
+}
