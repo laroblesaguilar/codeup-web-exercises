@@ -1,0 +1,55 @@
+:root{
+    --text_box_1: blue;
+    --text_box_2: green;
+    --text_box_3: darkkhaki;
+    --text_box_4: red;
+    --background_color_1: rgb(206,223,254);
+    --background_color_2: rgb(208,242,218);
+    --background_color_3: rgb(252,250,203);
+    --background_color_4: rgb(248,210,214);
+}
+
+
+
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+.box1{
+    background-color:var(--background_color_1);
+    border: 1px solid lightgray;
+    margin: 5px;
+    padding: 5px;
+    color:var( --text_box_1);
+}
+
+.box2{
+    background-color:var(--background_color_2);
+    border: 1px solid lightgray;
+    margin: 5px;
+    padding: 5px;
+    color: var(--text_box_2);
+
+}
+
+.box3{
+    background-color:var(--background_color_3);
+    border: 1px solid lightgray;
+    margin: 5px;
+    padding: 5px;
+    color: var(--text_box_3);
+}
+
+.box4{
+    background-color:var(--background_color_4);
+    border: 1px solid lightgray;
+    margin: 5px;
+    padding: 5px;
+    color: var(--text_box_4);
+
+
+}
