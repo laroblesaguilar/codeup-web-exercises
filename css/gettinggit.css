@@ -1,0 +1,134 @@
+body{
+
+    font-family: 'Merriweather', serif;
+    margin:0;
+
+}
+
+
+/*body h2{*/
+    /*text-align: center;*/
+/*}*/
+
+/*body p {*/
+    /*text-align: center;*/
+/*}*/
+
+
+#login{
+    float:right;
+}
+
+/*.header{*/
+    /*width:100%;*/
+/*}*/
+
+header{
+
+    display: flex;
+    flex-direction: column;
+    color:white;
+    margin: 0;
+    height: auto;
+    background-color: rgb(207, 70, 71);
+    background-size: 100% 100%;
+
+}
+
+.purchase {
+    padding: 1em;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+
+
+}
+
+header a{
+    color:white;
+}
+
+header img {
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+    padding-top: 20px;
+
+}
+
+header h4{
+    /*padding: 10%;*/
+    text-align:center;
+
+
+}
+
+.textbox{
+    width: 30%;
+    margin: 1em;
+
+}
+
+
+.overview {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+
+
+}
+
+article>h2{
+    text-align: center;
+}
+
+.ready h2 {
+    text-align: center;
+    padding-top:2%;
+}
+
+hr {
+    display: block;
+    width: 5%;
+    margin: 0 auto;
+    color:white;
+    height: 2px;
+    background-color: darkorange;
+    border:none;
+
+}
+
+.ready{
+    display: flex;
+    flex-direction: column;
+    color:white;
+    background-color: rgb(207, 70, 71);
+    height: 300px;
+}
+
+.ready h3{
+    text-align: center;
+}
+
+#pgph{
+    text-align: center;
+}
+
+.bottom {
+    text-align: center;
+    height: 200px;
+}
+
+#video {
+    display:block;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+

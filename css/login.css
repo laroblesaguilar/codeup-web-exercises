@@ -30,16 +30,15 @@ fieldset {
 }
 
 .width-80 {
+
     width: 80%;
-    box-sizing: border-box;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     /* The element with this class should 80% of the width and it must be centered */
     /* Read how to center elements with margin here: http://learnlayout.com/margin-auto.html*/
 }
 
 .form-group {
-    margin: .5em;
+    margin: .5em 0em;
     width: 100%;
     /* This element must use 100% of the width */
     /* It should have a separation of .5em from elements on top of it and below it*/
@@ -51,9 +50,9 @@ fieldset {
 }
 
 .form-control {
-    padding: 4px;
+    padding: 4px 0px;
     margin: .5em 0;
-    width: calc(100% - 16px);
+    width: calc(100% - 4px);
     /* There must be 4px on top of the text and below the text of an input with this class */
     /* It should have a separation of .5em from elements on top of it and below it */
 

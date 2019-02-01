@@ -91,7 +91,7 @@ a {
 
 
 .who-to-follow{
-    float:right;
+    float:left;
     margin: 0;
     width: calc(25% - 1em);
 
@@ -106,7 +106,7 @@ a {
 
 .profile-items{
     list-style: none;
-    padding: .5em;
+    padding: 0;
     margin: 0 .5em;
 
 
