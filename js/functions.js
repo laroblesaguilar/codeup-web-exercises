@@ -8,6 +8,10 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
+    function sayHello(name){
+        return ("Hello, " + name);
+}
+
 
 /**
  * TODO:
@@ -16,13 +20,18 @@
  *
  * console.log 'helloMessage' to check your work
  */
-
+    var helloMessage = sayHello("Luis");
+    console.log(helloMessage);
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+    var myName = "Luis";
+
+    console.log(sayHello(myName));
+
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -45,7 +54,10 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-
+    function isTwo(num){
+        return num == 2;
+}
+    console.log(isTwo(random));
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -57,13 +69,20 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.25, 25.50) // returns 6.37
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-
+    function calculateTip(percentage, total){
+        var toDecimal = percentage/100;
+        return (toDecimal * total);
+}
+    console.log(calculateTip(20, 20));
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+    var bill = prompt("What is your bill total?");
+    var tip = prompt("What percentage did you want to tip");
+    alert(calculateTip(bill, tip));
 
 /**
  * TODO:
@@ -79,3 +98,8 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+    function applyDiscount(price, discount){
+        var percentToDecimal = discount/100;
+        return price - (price * percentToDecimal);
+}
+    console.log(applyDiscount(100,20));
