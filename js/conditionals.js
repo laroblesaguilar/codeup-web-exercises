@@ -17,30 +17,30 @@ console.log("Test")
  */
 
 /* ########################################################################## */
-var confirmed = confirm("Would you like to enter a number?");
-var number;
+// var confirmed = confirm("Would you like to enter a number?");
+// var number;
 
-if (confirmed) {
-    var number = prompt("Please enter a number");
-    if (!isNaN(+number)) {
-
-        var greaterThan = (number > 0);
-
-        if (number % 2 === 1) {
-            alert(number + " is odd");
-            alert("Your number plus 100: " + (parseInt(number) + 100));
-            alert("Positive: " + greaterThan)
-
-        } else {
-            alert(number + " is even");
-            alert("Your number plus 100: " + (parseInt(number) + 100));
-            alert("Positive: " + greaterThan)
-
-        }
-    } else {
-        alert("Not a number");
-    }
-}
+// if (confirmed) {
+//     var number = prompt("Please enter a number");
+//     if (!isNaN(+number)) {
+//
+//         var greaterThan = (number > 0);
+//
+//         if (number % 2 === 1) {
+//             alert(number + " is odd");
+//             alert("Your number plus 100: " + (parseInt(number) + 100));
+//             alert("Positive: " + greaterThan)
+//
+//         } else {
+//             alert(number + " is even");
+//             alert("Your number plus 100: " + (parseInt(number) + 100));
+//             alert("Positive: " + greaterThan)
+//
+//         }
+//     } else {
+//         alert("Not a number");
+//     }
+// }
 
 /**
  * TODO:
@@ -174,11 +174,9 @@ console.log(calculateTotal(5, 100));// returns 0
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-var luckyNumber = Math.floor(Math.random() * 6);
-
+// var luckyNumber = Math.floor(Math.random() * 6);
 // var totalBill = prompt("What is your total bill?");
-
-// alert("Your lucky number is " + luckyNumber + " You only pay " + calculateTotal(luckyNumber, totalBill));
+// alert("Your lucky number is " + luckyNumber + "\n You only pay " + calculateTotal(luckyNumber, totalBill));
 
 // Bonus
 
@@ -308,23 +306,23 @@ function makeJustinMessage(input) {
 function numberMessage(num) {
 
     if (!isNaN(+num)) {
-        if (num == 1) {
+        if (num === 1) {
             return ("1 - uno");
-        } else if (num == 2) {
+        } else if (num === 2) {
             return ("2 - dos");
-        } else if (num == 3) {
+        } else if (num === 3) {
             return ("3 - tres");
-        } else if (num == 4) {
+        } else if (num === 4) {
             return ("4 - cuatro");
-        } else if (num == 5) {
+        } else if (num === 5) {
             return ("5- cinco");
-        } else if (num == 6) {
+        } else if (num === 6) {
             return ("6 - seis");
-        } else if (num == 7) {
+        } else if (num === 7) {
             return ("7 - siete");
-        } else if (num == 8) {
+        } else if (num === 8) {
             return ("8 - ocho");
-        } else if (num == 9) {
+        } else if (num === 9) {
             return ("9 - nueve");
         } else if (num.length > 1) {
             return ("Too many digits!");
@@ -350,32 +348,59 @@ function numCheck(num) {
 // alert(numCheck(userNum1));
 
 function conversion(origUnit, convertTo, num) {
-    switch ("userUnit") {
-        case "inches":
-            if(convertTo = "feet"){
-                return num/12;
-            }
-        case "feet":
-            if(convertTo = miles){
-                return ("to miles = " + num / 5280);
-            } else if (convertTo = "inches"){
-                return (num *12);
-            }
-            break;
-        case "miles":
-            return ("to light years = " + num / 5.879e+12);
-            break;
-        case "miles":
-            return ("to feet = " + num * 5280);
-            break;
-        case "light years":
-            return ("to miles = " + num * 5.879e+12);
-            break;
+    var confirm;
+
+    if (origUnit === "inches") {
+        if (convertTo === "feet") {
+            return num / 12;
+        }
+    } else if (origUnit === "feet") {
+        if (convertTo === "miles") {
+            return (num / 5280);
+        } else if (convertTo === "inches") {
+            return (num * 12);
+        }
+    } else if (origUnit === "miles") {
+        if (convertTo === "light years") {
+            return (num / 5.879e+12);
+        } else if (convertTo === "feet") {
+            return (num * 5280);
+        }
+    }
+    if (origUnit === "light years") {
+        return ("to miles is " + num * 5.879e+12);
+    }
+
+
+}
+
+// var userNum = prompt("Enter number you want to convert");
+// var userUnit = prompt("Original unit of measurement");
+// var convert = prompt("convert to what unit");
+// var finalAnswer = alert(userNum + " " +  userUnit + " to " + convert + " is " + conversion(userUnit, convert, userNum));
+
+
+function guessMyNumber(num) {
+    var randNum = (Math.random()) * 10;
+    randNum = randNum.toFixed(0);
+    console.log(randNum);
+
+    if (randNum == num) {
+        return "You got it!"
+    } else {
+        return "Nope!"
     }
 }
 
-var userNum = prompt ("Enter original measurement and I'll convert it!");
-var userUnit = prompt("Original unit of measurement");
+var userNum = prompt("Guess my number, its from 1 - 10!");
+alert(guessMyNumber(userNum));
 
+function celciusToFahrenheit(num, unit) {
+    if (unit === "fahrenheit") {
+        return ((num - 32) * 5 / 9);
+    } else if (unit === "celcius") {
+        return ((num * 9 / 5) + 32);
+    }
+}
 
-var convert = alert(conversion(userUnit, userNum));
+alert(celciusToFahrenheit(2, "celcius"));
