@@ -300,8 +300,8 @@ function makeJustinMessage(input) {
     }
 }
 
-// var name = prompt("Whats your name?");
-// alert(makeJustinMessage(name));
+var name = prompt("Whats your name?");
+alert(makeJustinMessage(name));
 
 function numberMessage(num) {
 
@@ -385,7 +385,7 @@ function guessMyNumber(num) {
     randNum = randNum.toFixed(0);
     console.log(randNum);
 
-    if (randNum == num) {
+    if (randNum === num) {
         return "You got it!"
     } else {
         return "Nope!"
@@ -403,4 +403,10 @@ function celciusToFahrenheit(num, unit) {
     }
 }
 
-alert(celciusToFahrenheit(2, "celcius"));
+// alert(celciusToFahrenheit(2, "celcius"));
+
+function within20(num){
+    return (Math.abs(100 - num) <= 20 || Math.abs(400 - num) <= 20);
+}
+
+// alert(within20(120));

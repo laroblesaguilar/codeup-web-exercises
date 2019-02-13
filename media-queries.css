@@ -1,0 +1,229 @@
+@media screen and (min-width:992px) {
+    h1{
+       float: left;
+    }
+
+    body{
+        display: block;
+    }
+
+    .master {
+        display: block;
+    }
+
+    .hidden-on-desktop {
+        display:none;
+    }
+
+    body h1 {
+        display:block;
+        float: left;
+
+
+    }
+
+    /*--navigation desktop---------------------------------------------------------------------------------------- */
+
+    .nav-links {
+        margin: 0;
+        padding: 0;
+        float: right;
+        background-color: greenyellow;
+        display: inline-block;
+    }
+
+    .nav-links li{
+        /*float:right;*/
+        list-style: none;
+        background-color: white;
+        padding: 1.5em;
+        margin-top: 1em;
+        display: inline;
+        height: max-content;
+        /*margin-top: 1%;*/
+        /*padding: 3%;*/
+    }
+
+    .nav-links li a{
+
+        font-size: 35%;
+        background-color: deeppink;
+        padding: 10%;
+        /*display: block;*/
+    }
+
+    /*--navigation desktop---------------------------------------------------------------------------------------- */
+
+    ul {
+        padding-left: 0px;
+    }
+
+    .header-img {
+        background-color: green;
+        margin: 0 auto;
+
+
+    }
+    section{
+        display: inline-block;
+    }
+}
+
+
+@media screen and (min-width:768px) {
+
+    /*---top button--------------------------------------------------------------------------------------- */
+    .alert-info a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightcyan;
+        border: 1px solid lightgray;
+        text-decoration: none;
+        text-align: center;
+        height: 100px;
+        /*margin-top: 30px;*/
+        font-size: 300%;
+
+
+    }
+
+    /*---navigation  --------------------------------------------------------------------------------------- */
+    .nav-links {
+        display: inline-block;
+        flex-direction: column;
+        /*background-color: blue;*/
+
+
+    }
+
+    .nav-links li {
+        flex: 1;
+        justify-content: center;
+        list-style: none;
+        background-color: darkgray;
+        padding: 1.5em;
+        margin-top: 1em;
+        display: inline;
+        /*margin-top: 1%;*/
+        /*padding: 3%;*/
+    }
+
+    .nav-links li a {
+        font-size: 250%;
+
+    }
+
+    ul {
+        padding-left: 0px;
+    }
+
+    /*---body --------------------------------------------------------------------------------------- */
+    .master {
+        display: flex;
+        flex-direction: column;
+        /*margin:1.5em;*/
+
+
+    }
+
+    body h1 {
+        text-align: center;
+        font-size: 3em;
+
+    }
+
+    .header-img {
+        flex: 1;
+
+
+    }
+
+
+    .main {
+        flex: 1;
+
+
+    }
+
+
+    #main {
+
+    }
+
+    .sub-section {
+        font-style: italic;
+        /*background-color: yellow;*/
+
+    }
+}
+
+/*--footer---------------------------------------------------------------------------------------- */
+
+/*!*#social-media-links*!*/
+
+/*@media screen and (min-width:992px) {*/
+    /*.master {*/
+        /*display: block;*/
+    /*}*/
+
+    /*.hidden-on-desktop {*/
+        /*display:none;*/
+    /*}*/
+
+    /*body h1 {*/
+        /*margin: 0;*/
+        /*display:block;*/
+        /*float: left;*/
+        /*text-align: left;*/
+
+
+    /*}*/
+
+/*!*--navigation desktop---------------------------------------------------------------------------------------- *!*/
+
+
+    /*.nav-links {*/
+        /*margin: 0;*/
+        /*padding: 0;*/
+        /*display: inline-block;*/
+        /*float: right;*/
+        /*background-color: greenyellow;*/
+    /*}*/
+
+    /*.nav-links li{*/
+        /*!*float:right;*!*/
+        /*list-style: none;*/
+        /*background-color: white;*/
+        /*padding: 1.5em;*/
+        /*margin-top: 1em;*/
+        /*display: inline-block;*/
+        /*height: max-content;*/
+        /*!*margin-top: 1%;*!*/
+        /*!*padding: 3%;*!*/
+    /*}*/
+
+    /*.nav-links li a{*/
+        /*font-size: 35%;*/
+        /*background-color: deeppink;*/
+        /*padding: 10%;*/
+        /*!*display: block;*!*/
+    /*}*/
+
+    /*!*--navigation desktop---------------------------------------------------------------------------------------- *!*/
+
+    /*ul {*/
+        /*padding-left: 0px;*/
+    /*}*/
+
+    /*.header-img {*/
+        /*background-color: green;*/
+        /*margin: 0 auto;*/
+
+
+    /*}*/
+    /*section{*/
+        /*display: inline-block;*/
+    /*}*/
+/*}*/
+
