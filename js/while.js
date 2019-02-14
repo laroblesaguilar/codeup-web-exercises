@@ -9,7 +9,6 @@ while (x < 17) {
 }
 
 var allCones = Math.floor(Math.random() * 50) + 50;
-
 var conesSold = Math.floor(Math.random() * 5) + 1;
 
 
@@ -17,6 +16,7 @@ do {
 
     console.log(conesSold + " cones sold");
     allCones = allCones - conesSold;
+    // console.log(allCones + " remaining!");
     conesSold = Math.floor(Math.random() * 5) + 1;
 
     if (allCones === 0) {
