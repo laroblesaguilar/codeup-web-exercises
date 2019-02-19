@@ -13,7 +13,10 @@
  */
 var person = {
     firstName: "Luis",
-    lastName: "Robles"
+    lastName: "Robles",
+    sayHello: function () {
+        return "Hello from " + this.firstName + " " + this.lastName + "!";
+    }
 };
 /**
  * TODO:
@@ -24,11 +27,9 @@ var person = {
  * Example
  * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
  */
-person.sayHello = function () {
-    return "Hello from " + person.firstName + " " + person.lastName + "!";
-}
 
 console.log(person.sayHello());
+
 /** TODO:
  * HEB has an offer for the shoppers that buy products amounting to
  * more than $200. If a shopper spends more than $200, they get a 12%
@@ -51,7 +52,7 @@ var shoppers = [
 
 shoppers.forEach(function (element, index, array) {
     if (element.amount > 200) {
-        console.log(element.name + " receives a discount of 12 % and therefore pays " + (element.amount * .88));
+        console.log(element.name + " receives a discount of 12 % and therefore pays " + (element.amount * .88).toFixed(2) + " original total: " + element.amount);
     } else console.log(element.name + " total: " + element.amount)
 });
 
@@ -83,20 +84,8 @@ var books = [
             lastName: "Steinbeck"
         }
     },
-    {
-        title: "Game of thrones",
-        author: {
-            firstName: "George",
-            lastName: "RR Martin"
-        }
-    },
-    {
-        title: "The Uglies",
-        author: {
-            firstName: "Scott",
-            lastName: "Westerfeld"
-        }
-    }
+    createBook("Game of Thrones", "George", "RR Martin"),
+   createBook("The Uglies", "Scott", "Westerfield")
 ];
 // console.log(books[1].title);
 // console.log(books[0].author.firstName);
@@ -126,9 +115,7 @@ var books = [
  *      ---
  *      ...
  */
-// books.forEach(function (element, index, array) {
-//     console.log("Book # " + (index + 1) + "\nTitle: " + element.title + "\nAuthor: " + element.author.firstName + " " + element.author.lastName)
-// });
+books.forEach(showBookInfo);
 
 /**
  * Bonus:
@@ -140,14 +127,22 @@ var books = [
  *   outputs the information described above. Refactor your loop to use your
  *   `showBookInfo` function.
  */
-function createBook(title, author) {
-    return books = {
+function createBook(title, firstName, lastName) {
+    var book = {
         title: title,
-        author: author
+        author: {
+            firstName: firstName,
+            lastName: lastName,
+        }
     };
+    return book;
 }
 
-// console.log(createBook("Test", "test"));
+function showBookInfo(element, index){
+    console.log("Book # " + (index + 1) + "\nTitle: " + element.title + "\nAuthor: " + element.author.firstName + " " + element.author.lastName);
+}
+
+console.log(createBook("Test", "Luis", "Robles"));
 
 // BONUS
 
