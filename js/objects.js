@@ -18,6 +18,45 @@ var person = {
         return "Hello from " + this.firstName + " " + this.lastName + "!";
     }
 };
+
+var arrayWithin = [["Luis", "Ariana1"], ["Ariana"], ["Leo"]]
+
+for(var i = 0; i < arrayWithin.length; i++){
+    console.log(arrayWithin[i].toString() + " sucks!");
+
+}
+
+// console.log(person.firstName);
+
+var person2 = [
+    {name: "Luis", lastName: "Robles", age: 25},
+    {name: "Ariana", lastName: "Robles", age: 24},
+    {name: "Leo", lastName: "Robles", age: 5}
+];
+
+// console.log(person2[1].name +" " + person2[1].lastName)
+
+for(var i = 0; i < person2.length; i++){
+    console.log(person2[i].name)
+   for(var z = 0; z < person2[i].name.length; z++){
+       console.log(person2[i].name.charAt(z))
+   }
+}
+
+var ArrayTest = ["Luna", "Luca", "Leo"]
+for(i = 0; i < ArrayTest.length; i++){
+    console.log(ArrayTest[i]);
+    for(var j = 0; j < ArrayTest[i].length; j++){
+        if(j === 1) console.log(ArrayTest[i].charAt(j))
+        }
+    }
+
+
+person2.forEach(function (person) {
+person.name = "Ha Ha ";
+console.log(person.name + person.lastName);
+});
+
 /**
  * TODO:
  * Add a sayHello method to the person object that returns a greeting using
@@ -87,6 +126,42 @@ var books = [
     createBook("Game of Thrones", "George", "RR Martin"),
    createBook("The Uglies", "Scott", "Westerfield")
 ];
+
+// for(var i = 0; i < books.length; i++ ){
+//     console.log(books[i].title + " is written by " + books[i].author.firstName + " " + books[i].author.lastName)
+// }
+
+books.forEach(function(book){
+    console.log(book.title + " " + "is written by " + book.author.firstName + " " + book.author.lastName);
+})
+
+
+// for(i = 0; i < books.length; i++){
+//     console.log(books[i].author.firstName);
+// }
+// books.forEach(function(book){
+//     console.log(book.author.firstName)
+// });
+
+// function authorFirstName (book){
+//     console.log(book.author.firstName);
+// }
+//
+// books.forEach(authorFirstName);
+
+// for(var i = 0; i < books.length; i++){
+//     console.log(books[i].title + " " + books[i].author.firstName +" " + books[i].author.lastName + " " + i);
+//
+// }
+
+
+
+// var x = "bob";
+// for(var i = 0; i < x.length; i++ ){
+//     console.log(x.charAt(i));
+// }
+
+
 // console.log(books[1].title);
 // console.log(books[0].author.firstName);
 
@@ -115,7 +190,7 @@ var books = [
  *      ---
  *      ...
  */
-books.forEach(showBookInfo);
+// books.forEach(showBookInfo);
 
 /**
  * Bonus:
@@ -160,9 +235,20 @@ var users = [
         age: 43
     }
 ];
-users.forEach(function(element,index,array){
-    (element.name = "changed it" , element.age +=1);
-});
+// users.forEach(showUsers);
+//
+// function showUsers(user){
+//     console.log(user.name + "  " +  user.age);
+// }
 
-console.log(users);
+// for(var i =0; i < users.length; i++){
+//     console.log(users[i].name + " " + users[i].age);
+//     console.log(users[i].name.charAt(0));
+//     for(i < 0 ; i < users.length; i ++){
+//         console.log(users[i].name.charAt(0));
+//
+//     }
+// }
+
+// console.log(users);
 // })();

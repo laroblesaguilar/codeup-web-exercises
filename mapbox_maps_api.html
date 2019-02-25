@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+<div id='map' style='width: 100%; height: 400px;'></div>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src ="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script>
+    mapboxgl.accessToken = mapBoxKey;
+
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+
+    });
+
+    var restaurants = [
+        {address: "Plaza Marina Bahia, 150 Bulevar Las Palmas, Cataño, 00962, Puerto Rico", name: "La China" },
+        {address: "315 Calle Recinto Sur, San Juan, 00901, Puerto Rico", name: "Raices"},
+        {address: "Urb Monte Claro ME54 Plaza 14, Bayamon, 00961, Puerto Rico", name: "Casa"}
+    ];
+
+    geocode("Bayamon, Puerto Rico", mapBoxKey).then(function(data){
+        map.setCenter(data);
+    })
+
+    restaurants.forEach(function(location){
+        geocode(location.address, mapBoxKey).then(function(data){
+           var popup = new mapboxgl.Popup()
+               .setText(location.name);
+            var marker =  new mapboxgl.Marker()
+            .setLngLat(data).addTo(map).setPopup(popup);
+        })
+    });
+
+</script>
+</body>
+</html>
