@@ -21,7 +21,7 @@ var person = {
 
 var arrayWithin = [["Luis", "Ariana1"], ["Ariana"], ["Leo"]]
 
-for(var i = 0; i < arrayWithin.length; i++){
+for (var i = 0; i < arrayWithin.length; i++) {
     console.log(arrayWithin[i].toString() + " sucks!");
 
 }
@@ -36,25 +36,25 @@ var person2 = [
 
 // console.log(person2[1].name +" " + person2[1].lastName)
 
-for(var i = 0; i < person2.length; i++){
+for (var i = 0; i < person2.length; i++) {
     console.log(person2[i].name)
-   for(var z = 0; z < person2[i].name.length; z++){
-       console.log(person2[i].name.charAt(z))
-   }
+    for (var z = 0; z < person2[i].name.length; z++) {
+        console.log(person2[i].name.charAt(z))
+    }
 }
 
 var ArrayTest = ["Luna", "Luca", "Leo"]
-for(i = 0; i < ArrayTest.length; i++){
+for (i = 0; i < ArrayTest.length; i++) {
     console.log(ArrayTest[i]);
-    for(var j = 0; j < ArrayTest[i].length; j++){
-        if(j === 1) console.log(ArrayTest[i].charAt(j))
-        }
+    for (var j = 0; j < ArrayTest[i].length; j++) {
+        if (j === 1) console.log(ArrayTest[i].charAt(j))
     }
+}
 
 
 person2.forEach(function (person) {
-person.name = "Ha Ha ";
-console.log(person.name + person.lastName);
+    person.name = "Ha Ha ";
+    console.log(person.name + person.lastName);
 });
 
 /**
@@ -124,14 +124,14 @@ var books = [
         }
     },
     createBook("Game of Thrones", "George", "RR Martin"),
-   createBook("The Uglies", "Scott", "Westerfield")
+    createBook("The Uglies", "Scott", "Westerfield")
 ];
 
 // for(var i = 0; i < books.length; i++ ){
 //     console.log(books[i].title + " is written by " + books[i].author.firstName + " " + books[i].author.lastName)
 // }
 
-books.forEach(function(book){
+books.forEach(function (book) {
     console.log(book.title + " " + "is written by " + book.author.firstName + " " + book.author.lastName);
 })
 
@@ -153,7 +153,6 @@ books.forEach(function(book){
 //     console.log(books[i].title + " " + books[i].author.firstName +" " + books[i].author.lastName + " " + i);
 //
 // }
-
 
 
 // var x = "bob";
@@ -190,6 +189,7 @@ books.forEach(function(book){
  *      ---
  *      ...
  */
+
 // books.forEach(showBookInfo);
 
 /**
@@ -213,7 +213,7 @@ function createBook(title, firstName, lastName) {
     return book;
 }
 
-function showBookInfo(element, index){
+function showBookInfo(element, index) {
     console.log("Book # " + (index + 1) + "\nTitle: " + element.title + "\nAuthor: " + element.author.firstName + " " + element.author.lastName);
 }
 
@@ -235,6 +235,156 @@ var users = [
         age: 43
     }
 ];
+
+function isNumeric(num) {
+    return !isNaN(+num);
+}
+
+console.log(isNumeric(7));
+
+var testArray = ["Ariana", "Luis", 9, 8, 7];
+
+function filterNumbers(array) {
+    return array.filter(isNumeric);
+}
+
+console.log(filterNumbers(testArray.sort()));
+
+var users = [
+    {
+        isAdmin: true,
+        email: 'user1@email.com'
+    },
+    {
+        isAdmin: true,
+        email: 'user2@email.com'
+    },
+    {
+        isAdmin: false,
+        email: 'user3@email.com'
+    }
+];
+var adminCounter = 0;
+
+function adminCount(input) {
+    for (var i = 0; i < input.length; i++) {
+        if (input[i].isAdmin === true) {
+            adminCounter++;
+        }
+    }
+    return adminCounter;
+}
+
+var emails = [];
+
+function adminEmail(input) {
+    for (var i = 0; i < input.length; i++) {
+        if (input[i].isAdmin === true) {
+            emails.push(input[i].email)
+        }
+    }
+    return emails;
+}
+
+var adminList = [];
+
+function adminObject(input) {
+    for (var i = 0; i < input.length; i++) {
+        if (input[i].isAdmin === true) {
+            adminList.push({
+                isAdmin: input[i].isAdmin,
+                email: input[i].email
+            })
+        }
+    }
+    return adminList;
+}
+
+console.log(adminCount(users));
+console.log(adminEmail(users));
+console.log(adminObject(users));
+
+var breads  = [
+    "white",
+    "wheat",
+    "rye",
+    "white"
+];
+
+var fillings = [
+    "pb&j",
+    "ham",
+    "cheese steak",
+    "tuna"
+];
+
+var sandwichObject = [];
+function makeSandwichObjects(bread, filling){
+    for(var i =0; i < bread.length; i ++){
+        sandwichObject.push({
+            bread: bread[i],
+            filling: filling[i]
+        });
+    }
+    return sandwichObject;
+}
+
+console.log(makeSandwichObjects(breads, fillings));
+
+function washcars(input){
+    for(var i = 0; i < input.length; i++){
+        input[i].isDirty = false;
+    }
+    return input;
+}
+var cars = [
+    {
+        make: 'Volvo',
+        color: 'red',
+        year: 1996,
+        isDirty: true
+    },
+    {
+        make: 'Toyota',
+        color: 'black',
+        year: 2004,
+        isDirty: false
+    },
+    {
+        make: 'Ford',
+        color: 'white',
+        year: 2007,
+        isDirty: true
+    }
+];
+
+console.log(washcars(cars));
+
+var dogs = [
+    {
+        name: "Chompers",
+        breed: "Pug",
+        age: 7
+    },
+    {
+        name: "Freddy",
+        breed: "Lab",
+        age: 4
+    },
+    {
+        name: "Mr. Pig",
+        breed: "Mastif",
+        age: 10
+    }
+];
+function getOlder(input){
+    for(var i = 0; i < input.length; i++){
+        input[i].age +=1;
+    }
+    return input;
+}
+
+console.log(getOlder(dogs))
 // users.forEach(showUsers);
 //
 // function showUsers(user){
