@@ -1,9 +1,22 @@
 "use strict"
 $(document).ready(function(){
 
-$("li").css("font-size", "30px");
-$("h1, p, li").css("background-color", "yellow");
+$("h1").click(function(e){
+    $(this).css("background-color", "red")
+});
 
-// alert($("h1"));
+$("p").dblclick(function(e){
+    $(this).css("font-size", "18px")
+});
+
+$("li").hover(
+    function(){
+        $(this).css("color", "red")
+    },
+    function () {
+        $(this).css("color", "black")
+    }
+);
+
 
 });
