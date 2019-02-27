@@ -1,5 +1,8 @@
 "use strict"
 $(document).ready(function(){
+    $('#textfield').keyup(function() {
+        alert('A key was pushed down!');
+    });
 
 $("h1").click(function(e){
     $(this).css("background-color", "red")
