@@ -13,11 +13,12 @@
     var konamiKey = "3838404037393739666513";
 
     $(document).keyup(function(event){
+
         console.log(event.keyCode);
         input += event.keyCode;
         if(input === konamiKey){
-            alert("You have added 30 lives")
             $("h1").css("color","yellow");
+            alert("You have added 30 lives")
         }
     });
 </script>

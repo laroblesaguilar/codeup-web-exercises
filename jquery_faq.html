@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .invisible{
+        visibility:hidden;
+    }
+</style>
+<body>
+<button>Click me!</button>
+<dl>
+    <dt>Alaska</dt>
+    <dd>Denali National Park and Preserve</dd>
+    <dt>Arizona</dt>
+    <dd>Grand Canyon National Park</dd>
+    <dt>California</dt>
+    <dd>Death Valley National Park</dd>
+    <dt>Colorado</dt>
+    <dd>Black Canyon of the Gunnison National Park</dd>
+    <dt>Hawaii</dt>
+    <dd>Hawaii Volcanoes National Park</dd>
+    <dt>Kentucky</dt>
+    <dd>Mammoth Cave National Park</dd>
+    <dt>North Carolina</dt>
+    <dd>Great Smoky Mountains National Park</dd>
+    <dt>Texas</dt>
+    <dd>Big Bend National Park</dd>
+</dl>
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+    // $("dd").addClass("invisible")
+    $("button").click(function(){
+        $("dd").toggleClass("invisible")
+
+    })
+</script>
+</body>
+</html>
