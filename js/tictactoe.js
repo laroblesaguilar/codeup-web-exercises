@@ -156,6 +156,24 @@ $(document).ready(function () {
         }
     }
 
+    // function opponent() {
+    //     count++;
+    //     if ($("#1").html() === "X") {
+    //         setTimeout(function () {
+    //             if($("#2").html().length === 0) {
+    //                 $("#2").html("O")
+    //             } else{
+    //                 $("#3").html("O")
+    //             }
+    //         }, 300)
+    //     }
+        // if ($("#2").html() === "X") {
+        //     setTimeout(function () {
+        //         $("#3").html("O") || $("#4").html("O")
+        //     }, 300)
+        // }
+    // }
+
     $("td").click(function (event) {
         var pattern = "";
         if (count % 2 === 1) {
@@ -177,8 +195,10 @@ $(document).ready(function () {
                 $("#turn").html("Player: X")
             }
         }
-
+        // opponent();
         checkForWinner();
+
     })
+
 
 })
