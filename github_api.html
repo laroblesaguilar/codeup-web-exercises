@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="target">TEST</div>
+<h1>male</h1>
+<table id="male">
+    <tr>
+        <th>Name</th>
+        <th>Balance</th>
+        <th>Age</th>
+    </tr>
+</table>
+<h2>female</h2>
+<table id="female">
+    <tr>
+        <th>Name</th>
+        <th>Balance</th>
+        <th>Age</th>
+    </tr>
+</table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        var endpoint = $.ajax("https://gist.githubusercontent.com/ryanorsinger/f77e5ec94dbe14e21771/raw/d4a1f916723ca69ac99fdcab48746c6682bf4530/profiles.json")
+        var sum = 0;
+        var averageAge = 0;
+        var maleCount = 0;
+        var femaleCount = 0;
+        var listCompanies = [];
+        var activeCount = 0;
+        var nonActiveBalance = 0;
+        var greenEye = 0;
+        var blueEye = 0;
+        var brownEye = 0;
+        var mostCommonEye = ""
+
+        endpoint.done(function (data) {
+            data = JSON.parse(data)
+            console.log(data)
+
+            for (var i = 0; i < data.length; i++) {
+                data[i].balance = data[i].balance.substring(1);
+                data[i].balance = data[i].balance.replace(",", "")
+                data[i].balance = +data[i].balance;
+                sum += data[i].balance;
+                averageAge += data[i].age;
+                if (data[i].gender === "male") {
+                    maleCount++
+                }
+                if (data[i].gender === "female") {
+                    femaleCount++
+                }
+                listCompanies.push(data[i].company)
+                if (data[i].isActive === true) {
+                    activeCount++
+                }
+                if (data[i].isActive === false) {
+                    nonActiveBalance = (sum - data[i].balance)
+                }
+                if (data[i].eyeColor === "blue") {
+                    blueEye++
+                }
+                if (data[i].eyeColor === "green") {
+                    greenEye++
+                }
+                if (data[i].eyeColor === "brown") {
+                    brownEye++
+                }
+
+                if (greenEye > brownEye && blueEye) {
+                    mostCommonEye = "green"
+                }
+                if (brownEye > greenEye && blueEye) {
+                    mostCommonEye = "brown"
+                }
+                if (blueEye > greenEye && brownEye) {
+                    mostCommonEye = "blue"
+                }
+            }
+
+            var report = {
+
+                totalNumberOfProfiles: data.length,
+                activeProfiles: activeCount,
+                sumofBalances: sum,
+                averageBalance: (sum / data.length).toFixed(2),
+                averageAge: (averageAge / data.length).toFixed(0),
+                userMale: maleCount,
+                userFemale: femaleCount,
+                companies: listCompanies,
+                nonActiveBalance: nonActiveBalance.toFixed(2),
+                commonEyeColor: mostCommonEye
+
+            }
+
+            function tableMaker(data) {
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].gender === "male") {
+                        $("#male").append("<tr><td>" + data[i].name + "</td><td>" + data[i].balance + "</td><td>" + data[i].age + "</td></tr>")
+                    } else{
+                        $("#female").append("<tr><td>" + data[i].name +"</td><td>"+ data[i].balance +"</td><td>" + data[i].age + "</td></tr>")
+                    }
+                    }
+
+                }
+
+                console.log("TEST")
+
+
+            tableMaker(data);
+
+
+            console.log(report)
+        })
+    })
+
+</script>
+</body>
+</html>

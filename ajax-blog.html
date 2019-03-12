@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="subject" type="text">
+<br>
+<br>
+<textarea id="content"></textarea>
+<br>
+<br>
+<button>Submit</button>
+<div id="posts"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+    // $("button").click(function(){
+    //
+    //     $.post("data/blog.json", {
+    //         title: $("#subject").val(),
+    //        content: $("#content").val(),
+    //         categories: ["test"],
+    //         date: "03/05/2019",
+    //
+    //    })
+    //
+    //     $("#posts").html(" ");
+    //     $("#posts").load(blogposts());
+    // })
+
+    $("button").click(function(){
+        $("#posts").append("<h1>" + $("#subject").val() +"</h1>" + "<p>"+ $("#content").val() + "</p>" )
+    });
+
+function blogposts() {
+    var posts = $.ajax("data/blog.json")
+    posts.done(function (data) {
+        for (var i = 0; i < data.length; i++) {
+            $("#posts").append("<h1>" + data[i].title + "</h1><p>" + data[i].content + "</p>")
+        }
+        console.log(data);
+    })
+}
+blogposts()
+
+</script>
+</body>
+</html>

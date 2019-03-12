@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <title>Calculator</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        #screen{
+            border: 1px solid lightgray;
+        }
+        input{
+            border: none;
+        }
+    </style>
 </head>
 <body class = "container">
-<div class="row mt-5 mb-5">
+<div id="screen" class="row mt-4 mb-3">
     <label  for="firstNum"></label>
     <input class="col" id="firstNum" type="text">
     <label for="operator"></label>
@@ -15,31 +23,34 @@
     <input class="col" id="secondNum" type="text">
 </div>
     <div class = "row">
-        <button type="button" class="btn btn-light col"  id="1" value="1" onclick="addNum(1)">1</button>
-        <button type="button" class="btn btn-light col" id="2" value="2" onclick="addNum(2)">2</button>
-        <button type="button" class="btn btn-light col" id="3" value="3" onclick="addNum(3)">3</button>
-        <button type="button" class="btn btn-light col" id="add" value="+" onclick=addOperator("+")>+</button>
-    </div>
-    <div class="row">
-        <button type="button" class="btn btn-light col" id="4" value="4" onclick="addNum(4)">4</button>
-        <button type="button" class="btn btn-light col" id="5" value="5" onclick="addNum(5)">5</button>
-        <button type="button" class="btn btn-light col" id="6" value="6" onclick="addNum(6)">6</button>
-        <button type="button" class="btn btn-light col" id="subtract" value="-" onclick=addOperator("-") > - </button>
-    </div>
-    <div class="row">
-        <button type="button" class="btn btn-light col" id="7" value="7" onclick="addNum(7)">7</button>
-        <button type="button" class="btn btn-light col" id="8" value="8"onclick="addNum(8)">8</button>
-        <button type="button" class="btn btn-light col" id="9" value="9" onclick="addNum(9)">9</button>
-        <button type="button" class="btn btn-light col" id="multiply" value="*" onclick=addOperator("*")>*</button>
-        <button type="button" class="btn btn-light col" id="exponent" onclick=addOperator("^")>^</button>
+        <button type="button" class="btn btn-light btn-sm col mr-1 mb-1" id="7" value="7" onclick="addNum(7)">7</button>
+        <button type="button" class="btn btn-light btn-sm col mr-1 mb-1" id="8" value="8"onclick="addNum(8)">8</button>
+        <button type="button" class="btn btn-light btn-sm col mr-1 mb-1" id="9" value="9" onclick="addNum(9)">9</button>
+        <button type="button" class="btn btn-secondary btn-sm col mb-1" id="divide" value="/" onclick=addOperator("/")>/</button>
 
     </div>
     <div class="row">
-        <button type="button" class="btn btn-light col" id="clear" onclick="clears()">C</button>
-        <button type="button" class="btn btn-light col" id="0" value="0" onclick="addNum(0)">0</button>
-        <button type="button" class="btn btn-light col" id="=" onclick="equals()">=</button>
-        <button type="button" class="btn btn-light col" id="divide" value="/" onclick=addOperator("/")>/</button>
-        <button type="button" class="btn btn-light col" id="decimal" onclick=addNum(".")>.</button>
+        <button type="button" class="btn btn-light btn-sm col mr-1 mb-1" id="4" value="4" onclick="addNum(4)">4</button>
+        <button type="button" class="btn btn-light btn-sm col mr-1 mb-1" id="5" value="5" onclick="addNum(5)">5</button>
+        <button type="button" class="btn btn-light btn-sm col mr-1 mb-1" id="6" value="6" onclick="addNum(6)">6</button>
+        <button type="button" class="btn btn-secondary btn-sm col mb-1" id="subtract" value="-" onclick=addOperator("-") > - </button>
+    </div>
+    <div class="row">
+        <button type="button" class="btn btn-light btn-sm col mr-1 mb-1"  id="1" value="1" onclick="addNum(1)">1</button>
+        <button type="button" class="btn btn-light btn-sm col mr-1 mb-1" id="2" value="2" onclick="addNum(2)">2</button>
+        <button type="button" class="btn btn-light btn-sm col mr-1 mb-1" id="3" value="3" onclick="addNum(3)">3</button>
+        <button type="button" class="btn btn-secondary btn-sm col mb-1" id="multiply" value="*" onclick=addOperator("*")>*</button>
+        <!--<button type="button" class="btn btn-secondary btn-sm col mb-1" id="exponent" onclick=addOperator("^")>^</button>-->
+
+    </div>
+    <div class="row">
+        <button type="button" class="btn btn-primary btn-sm col mr-1" id="=" onclick="equals()">=</button>
+        <button type="button" class="btn btn-warning btn-sm col " id="clear" onclick="clears()">C</button>
+        <button type="button" class="btn btn-light btn-sm col mr-1" id="0" value="0" onclick="addNum(0)">0</button>
+        <button type="button" class="btn btn-light btn-sm col mr-1" id="decimal" onclick=addNum(".")>.</button>
+        <button type="button" class="btn btn-secondary btn-sm col mr-1" id="add" value="+" onclick=addOperator("+")>+</button>
+
+
     </div>
 <script src="js/calculator.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
