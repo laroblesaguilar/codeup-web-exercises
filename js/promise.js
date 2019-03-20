@@ -20,37 +20,46 @@
 
 // const lastCommit = userName =>{
 
+    // function getLastPush(data){
+    // return data[0].created_at
+    // }
+
+    var test = $.ajax(`https://api.github.com/users/laroblesaguilar/events`, {headers: {"Authorization": `token ${gitHubKey}`}})
+        .done(function (data) {
+            console.log(data);
+
+        })
 
 
 
 
-    fetch(`https://api.github.com/users/laroblesaguilar/events`, {headers: {"Authorization": `token ${gitHubKey}`}})
-        .then((data) => data.json().then (updatedResponse => {
-            console.log(updatedResponse)
-        }))
-        // .then((jsonData) => {
-        //     return console.log(jsonData.login)
-        // })
-
+// fetch(`https://api.github.com/users/laroblesaguilar/events`, {headers: {"Authorization": `token ${gitHubKey}`}})
+//         .then((data) => data.json().then (updatedResponse => {
+//             console.log(updatedResponse)
+//             console.log(updatedResponse[0].type + " " + updatedResponse[0].created_at)
+//         }))
+//         .then((jsonData) => {
+//             return console.log(jsonData.login)
+//         })
 // }
 
 // console.log(lastCommit("laroblesaguilar"));
 
 
-const wait = (timeOut) =>{
-    return new Promise((resolve, reject) => {
-    setTimeout(() => {
-            resolve()
-            reject()
-
-        }, timeOut);
-    })
-        .then(() => console.log("You'll see this after " + timeOut/1000 + " seconds"))
-        .catch(() => console.log("Error"))
-
-}
-wait(1000)
-wait(3000)
+// const wait = (timeOut) =>{
+//     return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//             resolve()
+//             reject()
+//
+//         }, timeOut);
+//     })
+//         .then(() => console.log("You'll see this after " + timeOut/1000 + " seconds"))
+//         .catch(() => console.log("Error"))
+//
+// }
+// wait(1000)
+// wait(3000)
 
 // function wait(time){
 //     return new Promise((resolve, reject) => {

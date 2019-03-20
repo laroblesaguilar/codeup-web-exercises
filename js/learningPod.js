@@ -208,3 +208,11 @@ function firstLetterLoop(array){
 }
 
 firstLetterLoop(fruits)
+
+function factorialize(num){
+    var answer = 0;
+    for(var i = num - 1; i >=1; i--){
+        console.log(num = num * i)
+    }
+    return num
+}

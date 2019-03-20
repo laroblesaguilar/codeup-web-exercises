@@ -17,6 +17,7 @@
         return ("Hello, " + name);
 }
 
+import {showMultiplicationTable} from "./for_loops";
 
 /**
  * TODO:

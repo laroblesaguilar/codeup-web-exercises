@@ -6,7 +6,9 @@ function showMultiplicationTable(num){
     }
 }
 
-showMultiplicationTable(10);
+export{showMultiplicationTable}
+
+// showMultiplicationTable(10);
 
 // var randomNum = Math.floor(Math.random() * 20) + 180;
 
